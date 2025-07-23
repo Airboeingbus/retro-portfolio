@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VITANY Business Machine v2.0</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00FF00;
+      font-family: 'Fira Code', monospace;
+      font-size: 16px;
+      padding: 20px;
+      white-space: pre-wrap;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #00FF00;
+      animation: blink 1s step-end infinite;
+      margin-left: 4px;
+    }
+
+    @keyframes blink {
+      0%, 100% { background: transparent; }
+      50% { background: #00FF00; }
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"></div>
+
+  <script>
+    const lines = [
+      "VITANY BASIC v2.0",
+      "(C) 1982 VITANY BUSINESS MACHINES",
+      "64K RAM SYSTEM  38911 BASIC BYTES FREE",
+      "",
+      "READY.",
+      "> LOAD \"PROFILE\",8,1",
+      "SEARCHING FOR PROFILE",
+      "LOADING",
+      "READY.",
+      "> RUN",
+      "",
+      "[SYSTEM BOOTING...]",
+      "BIOS v5.0            OK",
+      "RAM Check           PASSED",
+      "I/O Devices         INITIALIZED",
+      "Display Output      CRT ACTIVE",
+      "Keyboard Interface  PS/2 READY",
+      "",
+      "Mounting user profile...",
+      "User: Shaktivell",
+      "Alias: airboeingbus",
+      "Education: Pentumulate CSE @ Amrita Vishwa Vidyapeetham",
+      "",
+      "Loading Modules...",
+      " > Avionics Simulation         LOADED",
+      " > Console Dev Exploration     ACTIVE",
+      " > Crafting Games & Console Experiments  SPINNING UP...",
+      " > Real-World Problem Solving ENGAGED",
+      "",
+      "Initializing Personal Interests...",
+      " - music, cinema, gaming, literature, comics",
+      " - Commercial Aviation         [FASCINATES]",
+      " - Retro Tech & Gaming         [JOYFUL]",
+      " - Writing to distill meaning from motion",
+      "",
+      "READY."
+    ];
+
+    const terminal = document.getElementById("terminal");
+    let lineIndex = 0;
+
+    function typeLine() {
+      if (lineIndex < lines.length) {
+        const line = document.createElement("div");
+        line.textContent = lines[lineIndex++];
+        terminal.appendChild(line);
+        window.scrollTo(0, document.body.scrollHeight); // Auto scroll
+        setTimeout(typeLine, 250);
+      } else {
+        const cursor = document.createElement("span");
+        cursor.className = "cursor";
+        terminal.appendChild(cursor);
+      }
+    }
+
+    typeLine();
+  </script>
+</body>
+</html> 
