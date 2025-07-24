@@ -8,12 +8,16 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="c64-header">
+  <div class="c64-header hidden">
     <div>** COMMODORE 64 BASIC V2 **</div>
     <div>64K RAM SYSTEM  38911 BASIC BYTES FREE</div>
   </div>
   <pre id="output"></pre>
-  <span class="cursor">█</span>
+  <div id="prompt-hint" class="hidden">Type <b>HELP</b> for a list of commands.</div>
+  <div id="prompt-line" style="display:none;">
+    <span>&gt; </span><span id="fake-input"></span><span class="cursor">█</span>
+  </div>
+  <audio id="boot-audio" src="startup.mpeg"></audio>
   <script src="script.js"></script>
 </body>
 </html>

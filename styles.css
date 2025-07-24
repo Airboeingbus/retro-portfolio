@@ -4,38 +4,60 @@ body {
   background-color: #0400a0;
   font-family: 'VT323', monospace;
   color: #80ffff;
-  font-size: 22px;
+  font-size: 32px;
   line-height: 1.4;
   min-height: 100vh;
 }
 .c64-header {
   text-align: center;
-  margin: 0 0 1.5em 0; /* No top margin */
+  margin: 0 0 1.5em 0;
   color: #80ffff;
-  font-size: 22px;
+  font-size: 32px;
   font-family: 'VT323', monospace;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 #output {
   display: block;
-  padding: 0; /* No left/right padding for authentic look */
+  padding: 0;
   white-space: pre;
   min-height: 60vh;
   font-family: 'VT323', monospace;
-  font-size: 22px;
+  font-size: 32px;
   color: #80ffff;
 }
-
 .cursor {
   display: inline-block;
   color: #80ffff;
   animation: blink 1s step-start infinite;
   font-family: 'VT323', monospace;
-  font-size: 22px;
-  margin-left: 2rem;
+  font-size: 32px;
 }
-
+#prompt-hint {
+  font-family: 'VT323', monospace;
+  color: #80ffff;
+  font-size: 20px;
+  margin-bottom: 0.5em;
+  text-align: left;
+  opacity: 0.7;
+}
+#prompt-line {
+  font-family: 'VT323', monospace;
+  color: #80ffff;
+  font-size: 32px;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+#fake-input {
+  min-width: 1ch;
+  outline: none;
+  display: inline-block;
+  white-space: pre;
+}
+.hidden {
+  display: none;
+}
 @keyframes blink {
   50% {
     opacity: 0;
