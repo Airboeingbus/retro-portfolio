@@ -4,7 +4,10 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects — Teletext View</title>
-  <link rel="stylesheet" href="C:\Users\shakt\OneDrive\Documents\retro-portfolio\CSS\projects.css"/>
+  <link
+    rel="stylesheet"
+    href="C:\Users\shakt\OneDrive\Documents\retro-portfolio\CSS\projects.css"
+  />
 </head>
 <body>
   <div class="teletext-frame">
@@ -14,19 +17,74 @@
     </header>
 
     <main>
+      <!-- GAME DEV -->
       <section>
         <h2>GAME DEV</h2>
+        <pre class="ascii-art">
+   .------.  
+  / .--.  \ 
+ / /    \  \
+| |      |  |
+\ \    /  /
+ \ '--'  / 
+  '------'  
+        </pre>
         <p>Building retro-inspired platformers in C++ and SDL2.</p>
+        <p>
+          <a
+            class="teletext-link"
+            href="https://github.com/airboeingbus/retro-platformer"
+            target="_blank"
+            rel="noopener"
+          >
+            GITHUB.COM/AIRBOEINGBUS/RETRO-PLATFORMER
+          </a>
+        </p>
       </section>
 
+      <!-- HOME AUTOMATION -->
       <section>
         <h2>HOME AUTOMATION</h2>
-        <p>Arduino + Node.js setup for smart-lights and sensors.</p>
+        <pre class="ascii-art">
+     /\  /\     
+    /  \/  \    
+   /  HOUSE  \   
+  | [ ]  [ ] |  
+  |   ___    |  
+  '---------'   
+        </pre>
+        <p>Arduino + Node.js setup for smart lights and sensors.</p>
+        <p>
+          <a
+            class="teletext-link"
+            href="https://github.com/airboeingbus/home-automation"
+            target="_blank"
+            rel="noopener"
+          >
+            GITHUB.COM/AIRBOEINGBUS/HOME-AUTOMATION
+          </a>
+        </p>
       </section>
 
+      <!-- WEB-BASED TOOLS -->
       <section>
         <h2>WEB-BASED TOOLS</h2>
-        <p>CLI-style portfolio site you’re seeing now, plus a chat widget.</p>
+        <pre class="ascii-art">
+   _______   
+  |  >_   |  
+  |_______|  
+        </pre>
+        <p>CLI-style portfolio site plus a custom chat widget.</p>
+        <p>
+          <a
+            class="teletext-link"
+            href="https://github.com/airboeingbus/web-tools"
+            target="_blank"
+            rel="noopener"
+          >
+            GITHUB.COM/AIRBOEINGBUS/WEB-TOOLS
+          </a>
+        </p>
       </section>
     </main>
 
@@ -36,10 +94,10 @@
   </div>
 
   <script>
-    // Navigate back on B key
     document.addEventListener('keydown', e => {
-      if (e.key === 'b' || e.key === 'B') {
-        window.history.back();
+      if (e.key.toLowerCase() === 'b') {
+        e.preventDefault();
+        window.location.href = 'index.html';
       }
     });
   </script>

@@ -4,42 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shaktivell // Portfolio Boot</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="C:\Users\shakt\OneDrive\Documents\retro-portfolio\CSS\styles.css"
-  />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet (go one level up to CSS folder) -->
+  <link rel="stylesheet" href="../CSS/styles.css" />
 </head>
 <body>
   <div class="c64-header hidden">
-    <div>** COMMODORE 64 BASIC V2 **</div>
+    <div>* COMMODORE 64 BASIC V2 *</div>
     <div>64K RAM SYSTEM  38911 BASIC BYTES FREE</div>
   </div>
 
   <pre id="output"></pre>
 
   <div id="prompt-line" style="display:none;">
-    <span>&gt; </span><span id="fake-input"></span
-    ><span class="cursor">█</span>
+    <span>&gt; </span><span id="fake-input"></span><span class="cursor">█</span>
   </div>
 
-  <!-- boot‐up audio -->
-  <audio
-    id="boot-audio"
-    src="C:\Users\shakt\OneDrive\Documents\retro-portfolio\Assets\startup.mpeg"
-    preload="auto"
-  ></audio>
+  <!-- boot-up audio (go one level up to Assets folder) -->
+  <audio id="boot-audio" src="../Assets/startup.mpeg" preload="auto"></audio>
 
-  <!-- typing‐click audio -->
-  <audio
-    id="key-audio"
-    src="C:\Users\shakt\OneDrive\Documents\retro-portfolio\Assets\typing.mp3"
-    preload="auto"
-  ></audio>
+  <!-- typing-click audio -->
+  <audio id="key-audio" src="../Assets/typing.mp3" preload="auto"></audio>
 
-  <script src="C:\Users\shakt\OneDrive\Documents\retro-portfolio\JS\script.js"></script>
+  <!-- Script (go one level up to JS folder) -->
+  <script src="../JS/script.js"></script>
 </body>
 </html>
