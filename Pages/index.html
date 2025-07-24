@@ -8,19 +8,38 @@
     href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="C:\Users\shakt\OneDrive\Documents\retro-portfolio\CSS\styles.css"
+  />
 </head>
 <body>
   <div class="c64-header hidden">
     <div>** COMMODORE 64 BASIC V2 **</div>
     <div>64K RAM SYSTEM  38911 BASIC BYTES FREE</div>
   </div>
+
   <pre id="output"></pre>
+
   <div id="prompt-line" style="display:none;">
     <span>&gt; </span><span id="fake-input"></span
     ><span class="cursor">█</span>
   </div>
-  <audio id="boot-audio" src="startup.mpeg"></audio>
-  <script src="script.js"></script>
+
+  <!-- boot‐up audio -->
+  <audio
+    id="boot-audio"
+    src="C:\Users\shakt\OneDrive\Documents\retro-portfolio\Assets\startup.mpeg"
+    preload="auto"
+  ></audio>
+
+  <!-- typing‐click audio -->
+  <audio
+    id="key-audio"
+    src="C:\Users\shakt\OneDrive\Documents\retro-portfolio\Assets\typing.mp3"
+    preload="auto"
+  ></audio>
+
+  <script src="C:\Users\shakt\OneDrive\Documents\retro-portfolio\JS\script.js"></script>
 </body>
 </html>

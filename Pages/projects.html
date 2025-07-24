@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects — Teletext View</title>
+  <link rel="stylesheet" href="C:\Users\shakt\OneDrive\Documents\retro-portfolio\CSS\projects.css"/>
+</head>
+<body>
+  <div class="teletext-frame">
+    <header>
+      <h1>PROJECTS</h1>
+      <p class="time">Page 100</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>GAME DEV</h2>
+        <p>Building retro-inspired platformers in C++ and SDL2.</p>
+      </section>
+
+      <section>
+        <h2>HOME AUTOMATION</h2>
+        <p>Arduino + Node.js setup for smart-lights and sensors.</p>
+      </section>
+
+      <section>
+        <h2>WEB-BASED TOOLS</h2>
+        <p>CLI-style portfolio site you’re seeing now, plus a chat widget.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Press [B] to go back.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Navigate back on B key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'b' || e.key === 'B') {
+        window.history.back();
+      }
+    });
+  </script>
+</body>
+</html>

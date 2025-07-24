@@ -1,0 +1,56 @@
+/* Base page styling */
+body {
+  margin: 0;
+  background: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+
+/* Teletext frame grid */
+.teletext-frame {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+.teletext-frame header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #0f0;
+  padding-bottom: 0.5em;
+}
+
+.teletext-frame header h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.teletext-frame header .time {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Main content grid */
+.teletext-frame main {
+  margin: 1em 0;
+  display: grid;
+  grid-gap: 1em;
+}
+
+.teletext-frame h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-decoration: underline dotted #0f0;
+}
+
+/* Footer styling */
+.teletext-frame footer {
+  border-top: 2px solid #0f0;
+  padding-top: 0.5em;
+}
