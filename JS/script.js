@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
       else if (key === "PROJECTS") {
         openApplication(
           "PROJECTS",
-          "file:///C:/Users/shakt/OneDrive/Documents/retro-portfolio/Pages/projects.html"
+          "Pages/projects.html"
         );
         return; // skip re-rendering prompt here
       }
