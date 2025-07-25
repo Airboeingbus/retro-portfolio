@@ -1,105 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects — Teletext View</title>
-  <link
-    rel="stylesheet"
-    href="CSS\projects.css"
-  />
+  <title>Retro Project Showcase</title>
+  <link rel="stylesheet" href="../CSS/projects.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <div class="teletext-frame">
-    <header>
-      <h1>PROJECTS</h1>
-      <p class="time">Page 100</p>
-    </header>
+  <div class="crt-overlay"></div>
 
-    <main>
-      <!-- GAME DEV -->
-      <section>
-        <h2>GAME DEV</h2>
-        <pre class="ascii-art">
-   .------.  
-  / .--.  \ 
- / /    \  \
-| |      |  |
-\ \    /  /
- \ '--'  / 
-  '------'  
-        </pre>
-        <p>Building retro-inspired platformers in C++ and SDL2.</p>
-        <p>
-          <a
-            class="teletext-link"
-            href="https://github.com/airboeingbus/retro-platformer"
-            target="_blank"
-            rel="noopener"
-          >
-            GITHUB.COM/AIRBOEINGBUS/RETRO-PLATFORMER
-          </a>
-        </p>
-      </section>
+  <header>
+    <h1>PROJECT ARCHIVE-1</h1>
+    <div class="page">[ TELETEXT MODE 01 ]</div>
+  </header>
 
-      <!-- HOME AUTOMATION -->
-      <section>
-        <h2>HOME AUTOMATION</h2>
-        <pre class="ascii-art">
-     /\  /\     
-    /  \/  \    
-   /  HOUSE  \   
-  | [ ]  [ ] |  
-  |   ___    |  
-  '---------'   
-        </pre>
-        <p>Arduino + Node.js setup for smart lights and sensors.</p>
-        <p>
-          <a
-            class="teletext-link"
-            href="https://github.com/airboeingbus/home-automation"
-            target="_blank"
-            rel="noopener"
-          >
-            GITHUB.COM/AIRBOEINGBUS/HOME-AUTOMATION
-          </a>
-        </p>
-      </section>
+  <main>
+    <section class="category">
+      <h2>Hardware Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="../Assets/icon1.png" alt="Hardware Icon" class="icon"/>
+          <h3>SmartZone-R</h3>
+          <p>ESP32-based runway rubber detection prototype with real-time sensing and Wokwi simulation.</p>
+          <a href="https://github.com/Airboeingbus/SmartZone-R" class="btn" target="_blank">View Repo</a>
+        </div>
 
-      <!-- WEB-BASED TOOLS -->
-      <section>
-        <h2>WEB-BASED TOOLS</h2>
-        <pre class="ascii-art">
-   _______   
-  |  >_   |  
-  |_______|  
-        </pre>
-        <p>CLI-style portfolio site plus a custom chat widget.</p>
-        <p>
-          <a
-            class="teletext-link"
-            href="https://github.com/airboeingbus/web-tools"
-            target="_blank"
-            rel="noopener"
-          >
-            GITHUB.COM/AIRBOEINGBUS/WEB-TOOLS
-          </a>
-        </p>
-      </section>
-    </main>
+        <div class="project-card">
+          <img src="../Assets/icon2.png" alt="Hardware Icon" class="icon"/>
+          <h3>Autonomous Metal Scrap Bot</h3>
+          <p>Gravity-based metal disposal robot with ultrasonic, RFID, and Bluetooth testing modules.</p>
+          <a href="https://github.com/Airboeingbus/Autonomous_metal_scrap_collection_bot" class="btn" target="_blank">View Repo</a>
+        </div>
 
-    <footer>
-      <p>Press [B] to go back.</p>
-    </footer>
-  </div>
+        <div class="project-card">
+          <img src="../Assets/icon3.png" alt="Hardware Icon" class="icon"/>
+          <h3>Autonomous Waste Sorting Bin</h3>
+          <p>Runway rubber detection system simulated on ESP32 + Wokwi with real-time alerts.</p>
+          <a href="https://github.com/Airboeingbus/Autonomous_waste_sorting_bin" class="btn">Coming Soon</a>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    document.addEventListener('keydown', e => {
-      if (e.key.toLowerCase() === 'b') {
-        e.preventDefault();
-        window.location.href = 'index.html';
-      }
-    });
-  </script>
+    <section class="category">
+      <h2>Software Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="../Assets/icon4.png" alt="Software Icon" class="icon"/>
+          <h3>Retro Boot Portfolio</h3>
+          <p>Terminal-style portfolio simulating Commodore 64 boot-up using HTML, CSS, and JS.</p>
+          <a href="https://github.com/Airboeingbus/retro-portfolio" class="btn" target="_blank">View Live</a>
+        </div>
+
+        <div class="project-card">
+          <img src="../Assets/icon5.png" alt="Software Icon" class="icon"/>
+          <h3>ML-Driven Flight Recommendor</h3>
+          <p>ML-powered system to suggest optimal routes based on budget, time & type.</p>
+          <a href="#" class="btn">In Progress</a>
+        </div>
+
+        <div class="project-card">
+          <img src="../Assets/icon6.png" alt="Software Icon" class="icon"/>
+          <h3>COMING SOON</h3>
+          <p>Stay Tuned for this card to be updated with new project</p>
+          <a href="#" class="btn">Coming Soon</a>
+        </div>
+      </div>
+    </section>
+    <div class="nav-back">
+  <p>PRESS A to return to main page</p>
+</div>
+
+    <div class="next-slide">
+      <p>PRESS B FOR NEXT SLIDE</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shaktivell // Rendered in CRT Mode</p>
+  </footer>
+<script>
+  document.addEventListener('keydown', e => {
+    if (e.key.toLowerCase() === 'b') {
+      window.location.href = '../Pages/projects-2.html';
+    }
+    if (e.key.toLowerCase() === 'a') {
+      window.location.href = '../index.html';
+    }
+  });
+</script>
 </body>
 </html>

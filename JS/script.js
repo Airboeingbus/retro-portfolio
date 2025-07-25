@@ -166,13 +166,31 @@ document.addEventListener("DOMContentLoaded", () => {
       else if (key === "CONTACT") {
         output.textContent += "EMAIL: your@email.com\n";
       }
-      else if (key === "PROJECTS") {
-        openApplication(
-          "PROJECTS",
-          "Pages/projects.html"
-        );
-        return; // skip re-rendering prompt here
-      }
+    else if (key === "PROJECTS") {
+  const projectBootLines = [
+    "INITIATING PROJECTS MODULE",
+    "SECURITY CHECK ............. OK",
+    "READING PROJECTS.DSK ....... OK",
+    "ALLOCATING MEMORY .......... 8192 BYTES",
+    "LINKING EXECUTABLE ......... DONE",
+    "READY TO LAUNCH INTERFACE..."
+  ];
+
+  let index = 0;
+
+  function printNextLine() {
+    if (index < projectBootLines.length) {
+      output.textContent += projectBootLines[index++] + "\n";
+      window.scrollTo(0, document.body.scrollHeight);
+      setTimeout(printNextLine, 500);
+    } else {
+      openApplication("PROJECTS", "Pages/projects.html");
+    }
+  }
+
+  printNextLine();
+  return; // skip prompt re-render
+}
       else if (key === "") {
         // nothing
       }
