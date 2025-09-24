@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 1rem;
+  background-color: black;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.dos-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#output {
+  white-space: pre-wrap;
+  min-height: 60vh;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+#fake-input {
+  display: inline-block;
+}
+
+#prompt-line {
+  display: flex;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
