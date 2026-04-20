@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Retro Achievements & Certifications</title>
+  <link rel="stylesheet" href="../CSS/achievements.css" />
+  <link rel="stylesheet" href="../CSS/scanlines.css" />
+  <link rel="stylesheet" href="../CSS/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="c64-header hidden">
+    <div>* COMMODORE 64 BASIC V2 *</div>
+    <div>64K RAM SYSTEM  38911 BASIC BYTES FREE</div>
+  </div>
+
+  <pre id="output"></pre>
+
+  <div id="achievements-container" style="display:none;">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">[ ALL ]</button>
+      <button class="filter-btn" data-filter="award">[ AWARDS ]</button>
+      <button class="filter-btn" data-filter="hackathon">[ HACKATHONS ]</button>
+      <button class="filter-btn" data-filter="paper">[ PUBLICATIONS ]</button>
+      <button class="filter-btn" data-filter="cert">[ CERTIFICATIONS ]</button>
+    </div>
+
+    <div id="achievements-grid" class="achievements-grid"></div>
+
+    <div class="back-button">
+      <button id="back-btn">[ RETURN TO MAIN ]</button>
+    </div>
+  </div>
+
+  <script src="../JS/achievements.js" defer></script>
+  <script src="../JS/scanlines.js" defer></script>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 15px; font-size: 11px; opacity: 0.8; border-top: 1px solid #80ffff; margin-top: 30px;">
+    <p>© 2025 S.P Shaktivell Sunder | @Airboeingbus</p>
+  </footer>
+</body>
+</html>

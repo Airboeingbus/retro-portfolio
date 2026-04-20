@@ -7,6 +7,9 @@ body {
   font-size: 32px;
   line-height: 1.4;
   min-height: 100vh;
+  /* Cross-browser font smoothing for retro aesthetic */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .c64-header {
@@ -69,5 +72,71 @@ body {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+/* Tablets and smaller (max 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .c64-header {
+    font-size: 18px;
+    margin: 0 0 1em 0;
+  }
+
+  #output {
+    font-size: 16px;
+    min-height: 50vh;
+    padding: 10px;
+  }
+
+  .cursor {
+    font-size: 16px;
+  }
+
+  #prompt-line {
+    font-size: 16px;
+    margin-top: 0.8em;
+  }
+
+  #prompt-hint {
+    font-size: 14px;
+  }
+}
+
+/* Mobile phones (max 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .c64-header {
+    font-size: 12px;
+    margin: 0 0 0.8em 0;
+  }
+
+  #output {
+    font-size: 12px;
+    min-height: 45vh;
+    padding: 8px;
+    line-height: 1.3;
+  }
+
+  .cursor {
+    font-size: 12px;
+  }
+
+  #prompt-line {
+    font-size: 12px;
+    margin-top: 0.5em;
+  }
+
+  #prompt-hint {
+    font-size: 10px;
   }
 }

@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #336699;
+  font-family: 'VT323', monospace;
+  color: #000000;
+  font-size: 16px;
+  min-height: 100vh;
+  padding: 10px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Cross-browser font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CBTerm Screen */
+.cbterm-screen {
+  width: 100%;
+  max-width: 860px;
+  background-color: #ccff00;
+  border: 8px solid #336699;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Menu Bar */
+.menu-bar {
+  background-color: #004080;
+  color: #ffff00;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 2px solid #004080;
+  font-size: 14px;
+}
+
+.menu-title {
+  letter-spacing: 1px;
+}
+
+.menu-right {
+  font-size: 12px;
+}
+
+/* Terminal Content */
+.terminal-content {
+  flex-grow: 1;
+  background-color: #ccff00;
+  color: #000000;
+  padding: 15px;
+  overflow-y: auto;
+  font-family: 'VT323', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 400px;
+  max-height: 600px;
+  border: 1px solid #004080;
+  margin: 4px;
+}
+
+#boot-sequence {
+  white-space: pre;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Timeline List */
+#timeline-list {
+  flex-grow: 1;
+  background-color: #ccff00;
+  color: #000000;
+  padding: 15px;
+  overflow-y: auto;
+  font-family: 'VT323', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  border: 1px solid #004080;
+  margin: 4px;
+}
+
+#timeline-display {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+/* Status Bar */
+.status-bar {
+  background-color: #004080;
+  color: #ffff00;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  border-top: 2px solid #004080;
+  font-weight: bold;
+}
+
+#status-text {
+  letter-spacing: 1px;
+}
+
+.status-right {
+  letter-spacing: 1px;
+}
+
+/* Scrollbar custom styling */
+.terminal-content::-webkit-scrollbar,
+#timeline-list::-webkit-scrollbar {
+  width: 12px;
+  background-color: #ccff00;
+}
+
+.terminal-content::-webkit-scrollbar-track,
+#timeline-list::-webkit-scrollbar-track {
+  background-color: #ccff00;
+  border-left: 1px solid #004080;
+}
+
+.terminal-content::-webkit-scrollbar-thumb,
+#timeline-list::-webkit-scrollbar-thumb {
+  background-color: #004080;
+  border: 1px solid #336699;
+}
+
+.terminal-content::-webkit-scrollbar-thumb:hover,
+#timeline-list::-webkit-scrollbar-thumb:hover {
+  background-color: #003060;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cbterm-screen {
+    max-width: 100%;
+    border-width: 4px;
+  }
+
+  .terminal-content,
+  #timeline-list {
+    min-height: 300px;
+    max-height: 400px;
+    font-size: 12px;
+  }
+
+  #boot-sequence {
+    font-size: 12px;
+  }
+}

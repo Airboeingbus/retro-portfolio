@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shaktivell Retro-Portfolio</title>
 
+  <!-- Font Preload for better performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=VT323&display=swap" as="style">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="CSS/styles.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
 </head>
 <body>
   <div class="c64-header hidden">
@@ -23,13 +29,22 @@
     <span>&gt; </span><span id="fake-input"></span><span class="cursor">█</span>
   </div>
 
-  <!-- boot-up audio -->
-  <audio id="boot-audio" src="Assets/startup.mpeg" preload="auto"></audio>
+  <!-- boot-up audio (lazy load) -->
+  <audio id="boot-audio" src="Assets/startup.mpeg" preload="none"></audio>
 
-  <!-- typing-click audio -->
-  <audio id="key-audio" src="Assets/typing.mp3" preload="auto"></audio>
+  <!-- typing-click audio (lazy load) -->
+  <audio id="key-audio" src="Assets/typing.mp3" preload="none"></audio>
+
+  <!-- Scanlines CSS and JS -->
+  <link rel="stylesheet" href="CSS/scanlines.css" />
+  <script src="JS/scanlines.js" defer></script>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px; font-size: 12px; opacity: 0.8; border-top: 1px solid #80ffff; margin-top: 50px;">
+    <p>© 2025 S.P Shaktivell Sunder | @Airboeingbus</p>
+  </footer>
 
   <!-- Script -->
-  <script src="JS/script.js"></script>
+  <script src="JS/script.js" defer></script>
 </body>
 </html>

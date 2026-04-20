@@ -82,6 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       if (lastCommand === "CONTACT") handleCommand("CONTACT");
       else if (lastCommand === "PROJECTS") handleCommand("PROJECTS");
+      else if (lastCommand === "ACHIEVEMENTS") handleCommand("ACHIEVEMENTS");
+      else if (lastCommand === "EXPERIENCE") handleCommand("EXPERIENCE");
+      else if (lastCommand === "SKILLS") handleCommand("SKILLS");
+      else if (lastCommand === "RESUME") handleCommand("RESUME");
     }, 1500);
   }
 
@@ -122,52 +126,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const key = cmd.trim().toUpperCase();
 
       if (key === "HELP") {
-        output.textContent += "AVAILABLE COMMANDS: HELP, ABOUT, CONTACT, PROJECTS\n";
+        output.textContent += "AVAILABLE COMMANDS: HELP, ABOUT, CONTACT, PROJECTS, ACHIEVEMENTS, EXPERIENCE, SKILLS, RESUME, CRT\n";
       }
       else if (key === "ABOUT") {
-        const aboutLines = [
-          "INITIATING ABOUT MODULE .......... OK",
-          "SCANNING DIGITAL BIOS ............ OK",
-          "ACCESSING PROFILE INFORMATION..... OK",
-          "LOADING MODULES [25%] ........ OK",
-          "LOADING MODULES [50%] ........ OK",
-          "LOADING MODULES [75%] ........ OK",
-          "LOADING MODULES [100%] ....... OK",
-          "Name: S.P Shaktivell Sunder",
-          "Status: Student @ Amrita Vishwa Vidyapeetham Chennai Campus",
-          "Location: 13.0843° N, 80.2705° E",
-          "Last Login: 2025-09-24 14:32:18",
-          "INTERFACING WITH ART-TECH SYSTEMS",
-          "Loading Interests Modules...",
-          "Homebrew Development ............ LOADED",
-          "Game Development ................ LOADED",
-          "Avionics Engineering ............ ACTIVE",
-          "Flight Simulation ................ INITIALIZED",
-          "Music ............................ LOADED",
-          "Cinema ........................... LOADED",
-          "Gaming ........................... LOADED",
-          "Literature ....................... LOADED",
-          "Comic Panels ..................... LOADED",
-          "Aviation Tracking ................ ACTIVE",
-          "Flight Systems ................... MONITORED",
-          "Writing [Story] .................. INITIALIZED",
-          "Retro Tech ....................... ENGAGED",
-          "PROFILE STATUS: READY"
-        ];
-
-        let index = 0;
-
-        function printNextLine() {
-          if (index < aboutLines.length) {  // Changed from aboutBootLines to aboutLines
-            output.textContent += aboutLines[index++] + "\n";  // Changed from aboutBootLines to aboutLines
-            window.scrollTo(0, document.body.scrollHeight);
-            setTimeout(printNextLine, 500);
-          } else {
-            output.textContent += "\nREADY.\n";
-            window.scrollTo(0, document.body.scrollHeight);
-          }
-        }
-        printNextLine();
+        output.textContent += "INITIATING ABOUT MODULE .......... OK\n";
+        output.textContent += "LOADING PROFILE INTERFACE ........ OK\n";
+        output.textContent += "TRANSITIONING TO VISUAL MODE....\n";
+        window.scrollTo(0, document.body.scrollHeight);
+        
+        setTimeout(() => {
+          sessionStorage.setItem("lastCommand", "ABOUT");
+          window.location.href = "Pages/about.html";
+        }, 1500);
         return;
       }
       else if (key === "CONTACT") {
@@ -213,6 +183,143 @@ document.addEventListener("DOMContentLoaded", () => {
           } else {
             sessionStorage.setItem("lastCommand", "PROJECTS");
             openApplication("PROJECTS", "Pages/projects.html");
+          }
+        }
+        printNextLine();
+        return;
+      }
+      else if (key === "ACHIEVEMENTS") {
+        const achievementBootLines = [
+          "INITIATING ACHIEVEMENTS MODULE",
+          "SECURITY CHECK ............. OK",
+          "READING ACHIEVEMENTS.DSK ... OK",
+          "ACCESSING CERTIFICATION DB . OK",
+          "ALLOCATING MEMORY .......... 4096 BYTES",
+          "LINKING EXECUTABLE ......... DONE",
+          "READY TO LAUNCH INTERFACE..."
+        ];
+        let index = 0;
+        function printNextLine() {
+          if (index < achievementBootLines.length) {
+            output.textContent += achievementBootLines[index++] + "\n";
+            window.scrollTo(0, document.body.scrollHeight);
+            setTimeout(printNextLine, 500);
+          } else {
+            sessionStorage.setItem("lastCommand", "ACHIEVEMENTS");
+            openApplication("ACHIEVEMENTS", "Pages/achievements.html");
+          }
+        }
+        printNextLine();
+        return;
+      }
+      else if (key === "CRT") {
+        const crtBootLines = [
+          "INITIATING CRT DISPLAY MODULE",
+          "ACCESSING VIDEO MEMORY ....... OK",
+          "CONFIGURING SCANLINE BUFFER . OK",
+          "ENABLING PHOSPHOR DECAY ...... OK",
+          "CALIBRATING ELECTRON GUN .... OK",
+          ""
+        ];
+        let index = 0;
+        function printNextLine() {
+          if (index < crtBootLines.length) {
+            output.textContent += crtBootLines[index++] + "\n";
+            window.scrollTo(0, document.body.scrollHeight);
+            setTimeout(printNextLine, 300);
+          } else {
+            // Dispatch toggle event
+            window.dispatchEvent(new Event('crtToggle'));
+            const status = window.crtManager?.getStatus();
+            const message = status 
+              ? "CRT MODE ..................... ENABLED\nSCANLINES GENERATED .......... ACTIVE\nPHOSPHOR GLOW ................ VISIBLE\n"
+              : "CRT MODE ..................... DISABLED\nSCANLINES GENERATED .......... OFF\nDISPLAY NORMAL ............... RESTORED\n";
+            output.textContent += message + "READY.\n";
+            window.scrollTo(0, document.body.scrollHeight);
+          }
+        }
+        printNextLine();
+        return;
+      }
+      else if (key === "EXPERIENCE") {
+        const experienceBootLines = [
+          "INITIATING EXPERIENCE MODULE",
+          "SECURITY CHECK ............. OK",
+          "READING EXPERIENCE.DSK ..... OK",
+          "ACCESSING WORK HISTORY DB .. OK",
+          "ALLOCATING MEMORY .......... 4096 BYTES",
+          "LINKING EXECUTABLE ......... DONE",
+          "READY TO LAUNCH INTERFACE..."
+        ];
+        let index = 0;
+        function printNextLine() {
+          if (index < experienceBootLines.length) {
+            output.textContent += experienceBootLines[index++] + "\n";
+            window.scrollTo(0, document.body.scrollHeight);
+            setTimeout(printNextLine, 500);
+          } else {
+            sessionStorage.setItem("lastCommand", "EXPERIENCE");
+            openApplication("EXPERIENCE", "Pages/experience.html");
+          }
+        }
+        printNextLine();
+        return;
+      }
+      else if (key === "SKILLS") {
+        const skillsBootLines = [
+          "INITIATING SKILLS MODULE",
+          "SECURITY CHECK ............. OK",
+          "READING SKILLS.DSK ......... OK",
+          "ACCESSING EXPERTISE DATABASE  OK",
+          "ALLOCATING MEMORY .......... 2048 BYTES",
+          "LINKING EXECUTABLE ......... DONE",
+          "READY TO LAUNCH INTERFACE..."
+        ];
+        let index = 0;
+        function printNextLine() {
+          if (index < skillsBootLines.length) {
+            output.textContent += skillsBootLines[index++] + "\n";
+            window.scrollTo(0, document.body.scrollHeight);
+            setTimeout(printNextLine, 500);
+          } else {
+            sessionStorage.setItem("lastCommand", "SKILLS");
+            openApplication("SKILLS", "Pages/skills.html");
+          }
+        }
+        printNextLine();
+        return;
+      }
+      else if (key === "RESUME") {
+        const resumeBootLines = [
+          "INITIATING DOCUMENT READER",
+          "SECURITY CHECK ............. OK",
+          "SCANNING RESUME.PDF ........ OK",
+          "ACCESSING ARCHIVE .......... OK",
+          "PREPARING DOWNLOAD ......... OK",
+          "",
+          "FILE: RESUME.PDF",
+          "SIZE: CALCULATING...",
+          "STATUS: READY TO DOWNLOAD"
+        ];
+        let index = 0;
+        function printNextLine() {
+          if (index < resumeBootLines.length) {
+            output.textContent += resumeBootLines[index++] + "\n";
+            window.scrollTo(0, document.body.scrollHeight);
+            setTimeout(printNextLine, 400);
+          } else {
+            output.textContent += "\n";
+            // Trigger PDF download
+            setTimeout(() => {
+              const link = document.createElement('a');
+              link.href = 'Assets/resume.pdf';
+              link.download = 'S.P_Shaktivell_Sunder_Resume.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              output.textContent += "DOWNLOAD INITIATED .......... OK\nREADY.\n";
+              window.scrollTo(0, document.body.scrollHeight);
+            }, 500);
           }
         }
         printNextLine();

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CBterm - Experience Module</title>
+  <link rel="stylesheet" href="../CSS/experience.css" />
+  <link rel="stylesheet" href="../CSS/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="cbterm-screen">
+    <!-- Top Menu Bar -->
+    <div class="menu-bar">
+      <span class="menu-title">CBTERM 5.0 - EXPERIENCE MODULE</span>
+      <span class="menu-right">1987</span>
+    </div>
+
+    <!-- Terminal Output -->
+    <div class="terminal-content" id="terminal-output">
+      <pre id="boot-sequence"></pre>
+    </div>
+
+    <!-- Timeline entries (hidden until boot complete) -->
+    <div id="timeline-list" style="display: none;">
+      <pre id="timeline-display"></pre>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span id="status-text">BOOTING...</span>
+      <span class="status-right">40 COL</span>
+    </div>
+  </div>
+
+  <script src="../JS/experience.js" defer></script>
+
+  <!-- Footer -->
+  <div class="cbterm-footer">
+    <p>© 2025 S.P Shaktivell Sunder | @Airboeingbus</p>
+  </div>
+</body>
+</html>

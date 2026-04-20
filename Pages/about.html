@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>// THE TALE OF SHAKTIVELL //</title>
+  <link rel="stylesheet" href="../CSS/about.css" />
+  <link rel="stylesheet" href="../CSS/scanlines.css" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="psychedelic-vignette"></div>
+
+  <div class="story-container">
+    <!-- Story Header -->
+    <div class="story-header">
+      <pre class="ascii-title">
+╔════════════════════════════════════════┐
+║     HOW YOU THINK                      │
+║   An interactive exploration           │
+╚════════════════════════════════════════┘
+      </pre>
+    </div>
+
+    <!-- Main Story Area -->
+    <div class="story-board">
+      <div class="story-text" id="story-text">
+        <!-- Story content will be injected here -->
+      </div>
+
+      <!-- ASCII Art Area -->
+      <div class="ascii-area" id="ascii-area">
+        <!-- ASCII art will be injected here -->
+      </div>
+
+      <!-- Choices Section -->
+      <div class="choices-container" id="choices-container">
+        <!-- Choices will be generated here -->
+      </div>
+
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span id="status-left">[ ADVENTURE MODE ]</span>
+        <span id="status-center">STORY UNFOLDS</span>
+        <span id="status-right">[ PRESS CHOICE ]</span>
+      </div>
+    </div>
+
+    <!-- Progress Tracker -->
+    <div class="progress-tracker">
+      <span class="progress-item">◆ CURIOSITY</span>
+      <span class="progress-item">◆ CREATIVITY</span>
+      <span class="progress-item">◆ COURAGE</span>
+      <span class="progress-item">◆ PASSION</span>
+    </div>
+  </div>
+
+  <script src="../JS/about.js" defer></script>
+  <script src="../JS/scanlines.js" defer></script>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px; font-size: 12px; color: #FFD700; border-top: 2px solid #DC143C; margin-top: 30px; background-color: rgba(0,0,0,0.8); text-shadow: 0 0 10px #DC143C;">
+    <p>© 2025 S.P Shaktivell Sunder | @Airboeingbus</p>
+  </footer>
+
+  <script>
+    // Session memory for returning from other pages
+    document.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'a') {
+        sessionStorage.setItem("lastCommand", "");
+        window.location.href = "../index.html";
+      }
+    });
+  </script>
+</body>
+</html>

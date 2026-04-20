@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cc0000;
+  font-family: 'VT323', monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* Cross-browser font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#paperclip-window {
+  width: 100%;
+  max-width: 900px;
+  background-color: #cccccc;
+  border: 3px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #404040;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Menu Bar */
+.menu-bar {
+  background-color: #000080;
+  color: #ffffff;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid #808080;
+  gap: 15px;
+}
+
+.menu-item {
+  padding: 2px 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.menu-item:hover {
+  background-color: #ffffff;
+  color: #000080;
+}
+
+/* Document Area */
+.document-area {
+  background-color: #ffffff;
+  padding: 20px;
+  flex-grow: 1;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  margin: 4px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#document-text {
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  color: #000000;
+  white-space: pre;
+  line-height: 1.4;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Status Bar */
+.status-bar {
+  background-color: #cccccc;
+  color: #000000;
+  padding: 2px 6px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  font-family: 'VT323', monospace;
+}
+
+/* Scrollbar styling */
+.document-area::-webkit-scrollbar {
+  width: 16px;
+}
+
+.document-area::-webkit-scrollbar-track {
+  background: #cccccc;
+}
+
+.document-area::-webkit-scrollbar-thumb {
+  background: #808080;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+}
+
+.document-area::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #paperclip-window {
+    max-width: 100%;
+  }
+
+  .document-area {
+    margin: 2px;
+    padding: 10px;
+  }
+
+  #document-text {
+    font-size: 14px;
+  }
+
+  .menu-bar {
+    font-size: 14px;
+  }
+}
+
+

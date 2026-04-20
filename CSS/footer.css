@@ -1,0 +1,164 @@
+/* Footer Styling - Retro Aesthetic */
+footer {
+  background-color: #0400a0;
+  border-top: 2px solid #80ffff;
+  color: #80ffff;
+  padding: 30px 20px;
+  margin-top: 50px;
+  font-family: 'VT323', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: #80ffff;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-shadow: 0 0 8px rgba(128, 255, 255, 0.3);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #80ffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(128, 255, 255, 0.6);
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #80ffff;
+  color: #80ffff;
+  text-align: center;
+  line-height: 28px;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+.social-link:hover {
+  background-color: #80ffff;
+  color: #0400a0;
+  box-shadow: 0 0 10px rgba(128, 255, 255, 0.6);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #80ffff;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+/* CBterm Footer (for CBterm pages like experience) */
+.cbterm-footer {
+  background-color: #ccff00;
+  border-top: 2px solid #004080;
+  color: #000000;
+  padding: 15px;
+  margin-top: 10px;
+  font-family: 'VT323', monospace;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.cbterm-footer a {
+  color: #000080;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+.cbterm-footer a:hover {
+  background-color: #000080;
+  color: #ccff00;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 15px;
+    margin-top: 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 13px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+  }
+}
+
+/* Paperclip footer (for skills page) */
+body.paperclip-style footer {
+  background-color: #cccccc;
+  border-top: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  color: #000000;
+  padding: 20px;
+}
+
+body.paperclip-style .footer-section h3 {
+  color: #000000;
+  text-shadow: none;
+  font-size: 13px;
+}
+
+body.paperclip-style .footer-section a {
+  color: #000080;
+  text-decoration: underline;
+}
+
+body.paperclip-style .footer-section a:hover {
+  color: #0000ff;
+  text-shadow: none;
+}

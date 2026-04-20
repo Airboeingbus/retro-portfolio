@@ -6,6 +6,9 @@ body {
   font-family: 'Share Tech Mono', monospace;
   font-size: 16px;
   line-height: 1.4;
+  /* Cross-browser font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .dos-header {
@@ -34,4 +37,39 @@ body {
 
 @keyframes blink {
   50% { opacity: 0; }
+}
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
+  .dos-header {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #output {
+    min-height: 50vh;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.3rem;
+    font-size: 12px;
+  }
+
+  .dos-header {
+    font-size: 0.9rem;
+  }
+
+  #output {
+    min-height: 45vh;
+    font-size: 11px;
+    line-height: 1.2;
+  }
 }

@@ -1,0 +1,150 @@
+/* CRT Scanlines Effect - Global */
+
+/* Scanlines overlay element */
+.crt-scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.25) 2px,
+    rgba(0, 0, 0, 0.25) 4px
+  );
+  animation: scanlines-flicker 0.1s infinite;
+}
+
+.crt-scanlines.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes scanlines-flicker {
+  0% { opacity: 0.25; }
+  5% { opacity: 0.35; }
+  10% { opacity: 0.2; }
+  15% { opacity: 0.4; }
+  20% { opacity: 0.25; }
+  25% { opacity: 0.38; }
+  30% { opacity: 0.15; }
+  35% { opacity: 0.35; }
+  40% { opacity: 0.25; }
+  45% { opacity: 0.37; }
+  50% { opacity: 0.22; }
+  55% { opacity: 0.4; }
+  60% { opacity: 0.26; }
+  65% { opacity: 0.36; }
+  70% { opacity: 0.2; }
+  75% { opacity: 0.39; }
+  80% { opacity: 0.24; }
+  85% { opacity: 0.35; }
+  90% { opacity: 0.19; }
+  95% { opacity: 0.38; }
+  100% { opacity: 0.25; }
+}
+
+/* Optional CRT curvature/vignette effect */
+.crt-vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  visibility: hidden;
+  opacity: 0;
+  background: 
+    radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+.crt-vignette.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* CRT glow effect on text */
+body.crt-active {
+  text-shadow: 0 0 2px rgba(128, 255, 255, 0.3);
+}
+
+/* Status indicator for CRT mode */
+.crt-status {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10000;
+  font-family: 'VT323', monospace;
+  font-size: 12px;
+  color: #80ffff;
+  padding: 5px 10px;
+  border: 1px solid #80ffff;
+  background-color: rgba(4, 0, 160, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.crt-status.active {
+  visibility: visible;
+  opacity: 0.7;
+}
+
+.crt-status::before {
+  content: '[CRT MODE ON]';
+}
+
+/* Smooth transitions for toggle */
+.crt-scanlines,
+.crt-vignette,
+.crt-status {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  .crt-scanlines {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.2) 3px,
+      rgba(0, 0, 0, 0.2) 5px
+    );
+  }
+
+  .crt-status {
+    font-size: 10px;
+    bottom: 5px;
+    right: 5px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .crt-scanlines {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 4px,
+      rgba(0, 0, 0, 0.15) 4px,
+      rgba(0, 0, 0, 0.15) 6px
+    );
+  }
+
+  .crt-status {
+    font-size: 9px;
+    bottom: 3px;
+    right: 3px;
+    padding: 2px 4px;
+    border: none;
+    background-color: transparent;
+  }
+}
