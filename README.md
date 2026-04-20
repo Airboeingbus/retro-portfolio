@@ -144,8 +144,6 @@ This portfolio stands out because it:
 - **Respects user experience**: Thoughtful interactions at every level
 
 ## Future Enhancements
-
-- GitHub Pages automatic deployment
 - Analytics tracking for engagement insights
 - Additional story nodes for deeper exploration
 - Favicon for browser tab identification
